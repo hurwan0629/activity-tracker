@@ -1,0 +1,17 @@
+{
+  "pipeline_version": "1.1.0",
+  "unit_of_split": "source session",
+  "split_policy": "deterministic hash: 90% train, 5% validation, 5% test",
+  "session_index": "indexes/sessions.parquet",
+  "segment_index": "indexes/segments.parquet",
+  "timeline_index": "indexes/timeline_samples.parquet",
+  "review_queue": "indexes/review_queue.parquet",
+  "hard_rejection_policy": [
+    "duration below configured minimum",
+    "resolution below configured minimum",
+    "invalid frame rate or missing codec",
+    "sparse decode success below configured minimum"
+  ],
+  "semantic_policy": "weak labels may flag review but never reject an otherwise valid session",
+  "privacy_policy": "audio removed; visible content is not automatically privacy-redacted; gated review required"
+}

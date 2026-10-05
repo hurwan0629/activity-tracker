@@ -1,0 +1,56 @@
+{
+  "pipeline_version": "1.1.0",
+  "model": "google/siglip2-base-patch16-224",
+  "model_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "labels": [
+    "coding_or_terminal",
+    "web_browsing",
+    "paper_or_document",
+    "training_monitoring",
+    "file_or_desktop",
+    "communication",
+    "other_screen_work",
+    "non_screen_or_idle"
+  ],
+  "prompt_ensembles": {
+    "coding_or_terminal": [
+      "a computer screen showing source code in an IDE or code editor",
+      "a computer screen showing a terminal, logs, debugging, or command-line work"
+    ],
+    "web_browsing": [
+      "a computer screen showing a web browser, website, or web application",
+      "a computer screen showing online search, documentation, or browser tabs"
+    ],
+    "paper_or_document": [
+      "a computer screen showing a research paper, PDF, notes, or technical document",
+      "a computer screen showing writing, reading, or document editing"
+    ],
+    "training_monitoring": [
+      "a computer screen showing machine learning metrics, charts, or experiment monitoring",
+      "a computer screen showing a training run, dashboard, notebook output, or evaluation results"
+    ],
+    "file_or_desktop": [
+      "a computer desktop, file manager, settings panel, or application launcher",
+      "a computer screen showing folders, files, windows, or operating-system controls"
+    ],
+    "communication": [
+      "a computer screen showing email, chat, messaging, or a discussion interface",
+      "a computer screen showing a video meeting or team collaboration application"
+    ],
+    "other_screen_work": [
+      "a desktop software interface being actively used for professional work",
+      "a computer screen showing a graphical application not covered by the other labels"
+    ],
+    "non_screen_or_idle": [
+      "a photograph or camera video without a visible computer interface",
+      "a blank screen, title card, logo, screensaver, loading screen, or idle display"
+    ]
+  },
+  "prompt_manifest_sha256": "b4f8957ba0692ed72fb1f2818745e41da65811853882502f2e5a15eb805d02bb",
+  "score_contract": {
+    "activity_score": "cosine similarity between normalized image and prompt-ensemble embeddings",
+    "activity_relative_probability": "softmax over this closed label set at temperature 0.05; not calibrated",
+    "activity_margin": "top cosine similarity minus runner-up cosine similarity",
+    "activity_label": "two-pass isolated-flicker-smoothed raw_activity_label"
+  }
+}

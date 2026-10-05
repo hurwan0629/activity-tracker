@@ -1,0 +1,42 @@
+{
+  "name": "PIE2F-LongHorizon",
+  "release_type": "long_horizon_visual_corpus",
+  "pipeline_version": "1.1.0",
+  "generated_at_utc": "2026-08-15T15:27:40.766620+00:00",
+  "source_repo": "p-doom/AGI-CAST-0.6k",
+  "source_revision": "0445213d451f21a14c77c9eb3e13c59470e2a84e",
+  "source_license": "CC0-1.0",
+  "expected_source_sessions": 147,
+  "released_sessions": 147,
+  "released_hours": 646.2136425000001,
+  "source_coverage_rate": 1.0,
+  "temporal_segments": 11696,
+  "timeline_samples": 77758,
+  "activity_distribution": {
+    "coding_or_terminal": 2992,
+    "other_screen_work": 2627,
+    "paper_or_document": 1741,
+    "non_screen_or_idle": 1701,
+    "web_browsing": 1515,
+    "file_or_desktop": 589,
+    "communication": 406,
+    "training_monitoring": 125
+  },
+  "split_distribution": {
+    "train": 130,
+    "test": 9,
+    "validation": 8
+  },
+  "review_required_sessions": 133,
+  "review_queue_rate": 0.9047619047619048,
+  "total_video_gb": 70.25091211497784,
+  "complete_646h_release": true,
+  "data_license": "CC0-1.0",
+  "notebook_license": "Apache-2.0",
+  "weak_label_model": {
+    "repo": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "license": "Apache-2.0",
+    "score_contract": "normalized cosine similarity; relative and uncalibrated"
+  }
+}
